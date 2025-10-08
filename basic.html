@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Vulnerability Scanner</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #0d1117; /* Dark background */
+            color: #c9d1d9; /* Light text */
+            font-family: 'Consolas', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #161b22; /* Dark container */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); /* Neon green shadow */
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #58a6ff; /* Neon blue */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        label {
+            color: #58a6ff; /* Neon blue */
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #58a6ff; /* Neon blue border */
+            border-radius: 5px;
+            background-color: #21262d; /* Dark input background */
+            color: #c9d1d9; /* Light text */
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        input[type="text"]::placeholder {
+            color: #6e7681; /* Placeholder text */
+        }
+        button {
+            background-color: #238636; /* Green button */
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2ea043; /* Lighter green on hover */
+        }
+        button:active {
+            background-color: #1f6f3a; /* Darker green on click */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Vulnerability Scanner</h1>
+        <form action="scan.php" method="POST">
+            <label for="url">Enter Website URL:</label>
+            <input type="text" id="url" name="url" placeholder="https://example.com" required>
+            <button type="submit">Scan Website</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
